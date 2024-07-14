@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tìm Kiếm Nhà Trọ</title>
+    <link rel="stylesheet" href="../css/hoanchinh.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Tìm Kiếm Nhà Trọ</h1>
+        <div class="search-bar">
+            <select id="typeFilter">
+                <option value="">Chọn loại nhà thuê</option>
+                <option value="Phòng trọ, nhà trọ">Phòng trọ, nhà trọ</option>
+                <option value="Nhà thuê nguyên căn">Nhà thuê nguyên căn</option>
+                <option value="Cho thuê căn hộ">Cho thuê căn hộ</option>
+                <option value="Cho thuê căn hộ mini">Cho thuê căn hộ mini</option>
+                <option value="Cho thuê căn hộ dịch vụ">Cho thuê căn hộ dịch vụ</option>
+                <option value="Tìm người ở ghép">Tìm người ở ghép</option>
+                <option value="Cho thuê mặt bằng">Cho thuê mặt bằng</option>
+            </select>
+            <select id="locationFilter">
+                <option value="">Chọn tỉnh thành</option>
+                <option value="Quận Đống Đa, Hà Nội">Đống Đa</option>
+                <option value="Cầu Giấy, Hà Nội">Cầu Giấy</option>
+                <option value="Thanh Xuân, Hà Nội">Thanh Xuân</option>
+                <option value="Hoàng Mai, Hà Nội">Hoàng Mai</option>
+                <option value="Hai Bà Trưng, Hà Nội">Hai Bà Trưng</option>
+                <option value="Hà Đông, Hà Nội">Hà Đông</option>
+                <option value="Đông Anh, Hà Nội">Đông Anh</option>
+            </select>
+            <select id="priceFilter">
+                <option value="">Chọn giá tiền</option>
+                <option value="Dưới 1 triệu đồng">Dưới 1 triệu đồng</option>
+                <option value="Từ 1 - 2 triệu đồng">Từ 1 - 2 triệu đồng</option>
+                <option value="Từ 2 - 3 triệu đồng">Từ 2 - 3 triệu đồng</option>
+                <option value="Từ 3 - 5 triệu đồng">Từ 3 - 5 triệu đồng</option>
+                <option value="Từ 5 - 7 triệu đồng">Từ 5 - 7 triệu đồng</option>
+                <option value="Từ 7 - 10 triệu đồng">Từ 7 - 10 triệu đồng</option>
+                <option value="Từ 10 - 15 triệu đồng">Từ 10 - 15 triệu đồng</option>
+                <option value="Trên 15 triệu đồng">Trên 15 triệu đồng</option>
+            </select>
+            <select id="areaFilter">
+                <option value="">Chọn diện tích</option>
+                <option value="Dưới 20m2">Dưới 20m2</option>
+                <option value="Từ 20m2 - 30m2">Từ 20m2 - 30m2</option>
+                <option value="Từ 30m2 - 50m2">Từ 30m2 - 50m2</option>
+                <option value="Từ 50m2 - 70m2">Từ 50m2 - 70m2</option>
+                <option value="Từ 70m2 - 90m2">Từ 70m2 - 90m2</option>
+                <option value="Trên 90m2">Trên 90m2</option>
+            </select>
+            <div class="buttons">
+                <button id="searchButton"><i class="fa fa-search"></i> Tìm kiếm</button>
+                <button id="resetButton">Reset</button>
+            </div>
+        </div>
+
+        <div class="sidebar">
+            <h2>Xem theo giá</h2>
+            <ul>
+                <li><a href="#" data-filter="Dưới 1 triệu đồng">Dưới 1 triệu</a></li>
+                <li><a href="#" data-filter="Từ 1 - 2 triệu đồng">Từ 1 - 2 triệu</a></li>
+                <li><a href="#" data-filter="Từ 2 - 3 triệu đồng">Từ 2 - 3 triệu</a></li>
+                <li><a href="#" data-filter="Từ 3 - 5 triệu đồng">Từ 3 - 5 triệu</a></li>
+                <li><a href="#" data-filter="Từ 5 - 7 triệu đồng">Từ 5 - 7 triệu</a></li>
+                <li><a href="#" data-filter="Từ 7 - 10 triệu đồng">Từ 7 - 10 triệu</a></li>
+                <li><a href="#" data-filter="Từ 10 - 15 triệu đồng">Từ 10 - 15 triệu</a></li>
+                <li><a href="#" data-filter="Trên 15 triệu đồng">Trên 15 triệu</a></li>
+            </ul>
+            <h2>Xem theo diện tích</h2>
+            <ul>
+                <li><a href="#" data-filter="Dưới 20m2">Dưới 20m2</a></li>
+                <li><a href="#" data-filter="Từ 20m2 - 30m2">Từ 20m2 - 30m2</a></li>
+                <li><a href="#" data-filter="Từ 30m2 - 50m2">Từ 30m2 - 50m2</a></li>
+                <li><a href="#" data-filter="Từ 50m2 - 70m2">Từ 50m2 - 70m2</a></li>
+                <li><a href="#" data-filter="Từ 70m2 - 90m2">Từ 70m2 - 90m2</a></li>
+                <li><a href="#" data-filter="Trên 90m2">Trên 90m2</a></li>
+            </ul>
+            <h2>Khu vực Hà Nội</h2>
+            <ul>
+                <li><a href="#">Cho thuê phòng trọ Ba Đình</a></li>
+                <li><a href="#">Cho thuê phòng trọ Bắc Từ Liêm</a></li>
+                <li><a href="#">Cho thuê phòng trọ Cầu Giấy</a></li>
+                <li><a href="#">Cho thuê phòng trọ Hà Đông</a></li>
+                <li><a href="#">Cho thuê phòng trọ Hai Bà Trưng</a></li>
+                <li><a href="#">Cho thuê phòng trọ Hoàn Kiếm</a></li>
+                <li><a href="#">Cho thuê phòng trọ Hoàng Mai</a></li>
+            </ul>
+        </div>
+
+        <div id="results">
+        </div>
+    </div>
+    <script src="../js/hoanchinh.js"></script>
+</body>
+</html>

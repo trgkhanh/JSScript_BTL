@@ -1,0 +1,245 @@
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header styles */
+header {
+    background-color: #dbdbdb;
+    width: 100%;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+}
+header img {
+    width: 200px;
+    height: 40px;
+}
+header div ul li {
+    display: flex;
+}
+header div ul li a:hover {
+    text-decoration:underline;
+}
+header div ul li a {
+    text-decoration: none;
+    color: #333;
+}
+header div ul li img {
+    width: 17px;
+    height: 17px;
+    margin: 4px 5px 0;
+}
+.container ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: right;
+}
+.container ul li {
+    margin: 0 10px;
+    position: relative;
+}
+.container {
+    max-width: auto;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Main content wrapper */
+.main-content {
+    display: flex;
+    flex: 1;
+    padding: 20px;
+    margin-top: 70px;
+    
+}
+
+/* Container1 styles */
+.container1 {
+    position: relative;
+    width: 50px;
+    height: 300px;
+    flex: 10; /* Smaller portion */
+    background-color: rgb(255, 203, 15);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.avatar img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover; /* Maintain aspect ratio and cover container */
+    border-radius: 200px;
+    padding-top: 10px;
+    margin-bottom: 20px;
+}
+
+.container1 p {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* Information styles */
+.information {
+    flex: 2; /* Larger portion */
+    background-color: #f9f9f9;
+    padding: 15px;
+    border: 1px solid #ddd;
+    margin-right: 20px; /* Space between information and container1 */
+}
+
+.information h1 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+    margin-top: 15px;
+}
+
+.information h3 {
+    font-size: 18px;
+    color: black;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.information p {
+    line-height: 1.6;
+    margin-bottom: 0px;
+}
+
+.room-text-information {
+    display: flex;
+    /* justify-content: space-between; */
+    margin-top: 10px;
+}
+
+.room-text-information div {
+    flex: 1;
+    text-align:center;
+    padding: 5px;
+    margin: 0 5px;
+}
+.advertisement {
+    position:absolute;
+    margin: 330px 100px 0 965px; /* Khoảng cách từ container1 */
+}
+
+.advertisement img {
+    max-width: 210px; /* Đảm bảo ảnh không vượt quá chiều rộng của phần tử cha */
+    height: 100%; /* Giữ tỷ lệ chiều cao */
+}
+
+footer {
+    display: flex;
+    background-color: #fff;
+    padding-top: 20px;
+}
+.coloum { 
+    flex: 0.3%;
+}
+footer img {
+    width: 250px;
+    height: 70px;
+}
+footer p {
+    margin: 8px 0;
+    max-width: 400px;
+    font-size: 15px;
+}
+footer a:hover {
+    text-decoration:underline;
+}
+footer a {
+    text-decoration: none;
+    color : #000000
+}
+form {
+    display: flex;
+    align-items: center;
+}
+form input[type="text"] {
+    padding: 5px;
+    margin: 15px 10px 15px 0;
+    border-radius: 5px;
+    width: 250px;
+    height: 30px;
+}
+form button {
+    background-color: rgb(245, 14, 14);
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: auto;
+    width: 38px;
+    height: 30px;
+}
+form button img {
+    width: 27px;
+    height: 27px;
+    padding: 0;
+}
+.image-slider {
+    position: relative;
+    width: 900px; /* Kích thước khung slider */
+    height: 500px;
+    margin: auto;
+    overflow: hidden;
+    border: 2px solid #ddd; /* Viền xung quanh slider */
+    border-radius: 10px; /* Bo góc slider */
+    background-color:#f0f0f0;
+}
+
+.slider-images {
+    width: auto; /* Chiều rộng tối đa của slider */
+    height: 500px; /* Chiều cao tối đa của slider */
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slider-images img {
+    max-width: 450px; /* Chiều rộng tối đa của ảnh */
+    max-height: 500px; /* Chiều cao tối đa của ảnh */
+    object-fit: contain; /* Hiển thị ảnh mà không làm biến dạng, và có thể thay đổi chế độ này thành "cover" nếu bạn muốn ảnh lấp đầy slider */
+    border-radius: 10px; /* Bo góc của ảnh */
+    margin: 0 260px 0 270px;
+}
+.prev-btn, .next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    user-select: none;
+}
+
+.prev-btn {
+    left: 10px;
+}
+
+.next-btn {
+    right: 10px;
+}
+
+.prev-btn:hover, .next-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
